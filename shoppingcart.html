@@ -1,12 +1,14 @@
-<html>
-<head>
 
-<style type="text/css">
+ 
+<html> 
+<head> 
+ 
+<style type="text/css"> 
 h1 { margin:0; font-size:16px; text-decoration:underline; }
 li { color: #555555; }
 li:hover { background-color: #C3C3C3; }
 ol { list-style-type: square; }
-
+ 
 div #cart { width: 90%; height: 83%; background-color: #f7f7f7; display: block; margin: auto; border: solid 1px #3b5998; }
 div #cart_bg { width: 400px; height: 230px; background-color: #8b9dc3; display: block; border: solid 1px #3b5998; float: left; }
 div #header { width: 90%; height: 12%; margin: auto; display: block; font-size: 1.8em; }
@@ -19,16 +21,16 @@ div .button { color: #3b5998; }
 div .button:hover { cursor: pointer; }
 div .text { padding-left: 5px; padding-top: 2px; vertical-align: middle; }
 div .itemTextbox { height: 90%; width: 20px; }
-
-
+ 
+ 
 .menu {
 	width: 494px;
 	border: 3px solid black;
 	padding: 10px;
 }
-
-
-
+ 
+ 
+ 
 .menuitem {
 	font-family: helvetica;
 	width: 150px;
@@ -38,17 +40,17 @@ div .itemTextbox { height: 90%; width: 20px; }
 	padding: 5px;
 	z-index: 1;
 	overflow: none;
-
+ 
 }
-
-
-
+ 
+ 
+ 
 .menuitem:hover {
 	cursor: hand;
 	padding: 3px;
 	border: 3px solid blue;
 }
-
+ 
 .menuitem .overlay {
 	position: relative;
 	height: 156px;
@@ -57,7 +59,7 @@ div .itemTextbox { height: 90%; width: 20px; }
 	left: -3px;
 	z-index: 4;
 }
-
+ 
 .menuitem .qty {
 	font-weight: bold;
 	border: 3px solid black;
@@ -71,7 +73,7 @@ div .itemTextbox { height: 90%; width: 20px; }
 	background: yellow;
 	z-index: 5;
 }
-
+ 
 .menuitem .content {
 	position: relative;
 	height: 160px;
@@ -79,33 +81,33 @@ div .itemTextbox { height: 90%; width: 20px; }
 	top: -177px;
 	z-index: 3;
 }
-
+ 
 .menuitem .overlay:hover {
-
+ 
 }
-
+ 
 .menuitem .overlay .up {
 	width: 100%;
 	height: 50%;
 	/*background: rgba(0,255,127,0.2);*/
 }
-
+ 
 .menuitem .overlay .down {
 	width: 100%;
 	height: 50%;
 	/*background: rgba(178,34,34,0.2);*/
 }
-
+ 
 .menuitem .overlay .up:hover {
 	background: rgba(0,255,127,0.6);
 }
-
+ 
 .menuitem .overlay .down:hover {
 	background: rgba(178,34,34,0.6);
 }
-
-
-
+ 
+ 
+ 
 .menuitem .icon {
 	background: url("http://placehold.it/75x75");
 	margin: auto;
@@ -113,126 +115,216 @@ div .itemTextbox { height: 90%; width: 20px; }
 	height: 75px;
 	border: 1px solid black;
 }
-
+ 
 .menuitem .name {
 	font-size: 1em;
 	margin: auto;
 	width: 90%;
 	text-align: center;
 }
-
+ 
 .menuitem .description { 
 	width: 90%;
 	font-size: 0.8em;
 	margin: auto;
 }
-
+ 
 .marginfix {
 	margin-bottom: -4px;
 }
-</style>
-<body>
-
-<div class="menu">
-	<div class="menuitem">
-		<div class="overlay">
-			<div class="up"></div>
-			<div class="down"></div>
-		</div>
-		<div class="qty">4</div>
-		<div class="content">
-			<div class="controls"></div>
-			<div class="icon"></div>
-			<div class="name">Chocolate Chip</div>
-			<div class="description">Chocolate chip cookies are fuckin great man!</div>
-		</div>
-	</div>
-	<div class="menuitem">
-		<div class="overlay">
-			<div class="up"></div>
-			<div class="down"></div>
-		</div>
-		<div class="qty">40</div>
-		<div class="content">
-			<div class="controls"></div>
-			<div class="icon"></div>
-			<div class="name"></div>
-			<div class="description"></div>
-		</div>
-		
-	</div>
-	<div class="menuitem">
-		<div class="overlay">
-			<div class="up"></div>
-			<div class="down"></div>
-		</div>
-		<div class="qty">400</div>
-		<div class="content">
-			<div class="controls"></div>
-			<div class="icon"></div>
-			<div class="name"></div>
-			<div class="description"></div>
-		</div>
-	</div>
-	<!-- we are going to have to figure out margins programatically-->
-	<div class="menuitem marginfix">
-		<div class="overlay">
-			<div class="up"></div>
-			<div class="down"></div>
-		</div>
-		<div class="qty"></div>
-		<div class="content">
-			<div class="controls"></div>
-			<div class="icon"></div>
-			<div class="name"></div>
-			<div class="description"></div>
-		</div>
-	</div>
-	<div class="menuitem marginfix">
-		<div class="overlay">
-			<div class="up"></div>
-			<div class="down"></div>
-		</div>
-		<div class="qty"></div>
-		<div class="content">
-			<div class="controls"></div>
-			<div class="icon"></div>
-			<div class="name"></div>
-			<div class="description"></div>
-		</div>
-	</div>
-	<div class="menuitem marginfix">
-		<div class="overlay">
-			<div class="up"></div>
-			<div class="down"></div>
-		</div>
-		<div class="qty"></div>
-		<div class="content">
-			<div class="controls"></div>
-			<div class="icon"></div>
-			<div class="name"></div>
-			<div class="description"></div>
-		</div>
-	</div>
-</div>
-<br>
-<textarea rows="30" cols="100" id="testout" style="display: none;"></textarea>
-
-
-<form action="https://www.paypal.com/cgi-bin/webscr" id="pp_form" method="post" onsubmit="return cart.submit();">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="BZAVVT52B9VAW">
-<table>
-<tr><td><input type="hidden" name="on0" value="# of cookies">How many cookies would you like to order?</td></tr><tr><td><select id="item_dropdown" name="os0">
-	<option value="1 dozen cookies">1 dozen cookies $12.00</option>
-	<option value="3 dozen cookies">3 dozen cookies $22.00</option>
-</select> </td></tr>
-<tr><td><input type="hidden" name="on1" value="What cookies would you like?"></td></tr>
-<tr><td><input type="hidden" name="os1" maxlength="60" id="cart_output"></td></tr>
-</table>
-<input type="hidden" name="currency_code" value="USD">
-<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</body>
-</html>
+</style> 
+ 
+<script> 
+ 
+Menu.prototype = {};
+Menu.constructor = Menu;
+ 
+function Menu ( name ) {
+	this.name = name;
+	this.menuitems = [];
+	Object.call(this);
+}
+ 
+ 
+Menu.prototype.addMenuItem = function ( name, abv, icon, desc ) {
+	this.menuitems.push(new MenuItem(name,abv,icon,desc));
+}
+ 
+Menu.prototype.draw = function ( ) {
+	var menu = document.createElement('div');
+	menu.className = "menu";
+	for(var i=0; i < this.menuitems.length; i++){
+		menu.appendChild(this.menuitems[i].draw());
+	}
+	return menu;
+}
+ 
+MenuItem.prototype = {};
+MenuItem.constructor = MenuItem;
+ 
+function MenuItem ( name, abbreviation, icon, description ) {
+	this.name = name;
+	this.abv = abbreviation;
+	this.icon = icon || "http://placehold.it/75x75";
+	this.desc = description;
+	this.qty = 0;
+}
+ 
+MenuItem.prototype.increaseQty = function () {
+	++this.qty;
+	//this.updateQty();
+}
+ 
+MenuItem.prototype.decreaseQty = function ( ) {
+	(this.qty>0)?--this.qty:this.qty=0;
+	//this.updateQty();
+}
+ 
+MenuItem.prototype.setQty = function ( q ) {
+	if ( !(q instanceof Number) )
+		return false;
+	if(q>144) {
+		q = 144;
+		//ordering this many? let's talk!
+	}
+	if(q<0) {
+		q = 0;
+	}
+	this.qty = q;
+}
+ 
+MenuItem.prototype.startHoldInc = function ( ) {
+	var that = this;
+	this.intervalID = window.setInterval(function(){that.increaseQty();that.updateQty();},100);
+}
+ 
+MenuItem.prototype.startHoldDec = function ( ) {
+	var that = this;
+	this.intervalID = window.setInterval(function(){that.decreaseQty();that.updateQty();},100);
+}
+ 
+MenuItem.prototype.endHold = function ( ) {
+	if(this.intervalID)
+		window.clearInterval(this.intervalID);
+}
+ 
+MenuItem.prototype.drawText = function ( ) {
+	alert(this.qty);
+}
+ 
+MenuItem.prototype.updateQty = function ( ) {
+	var div = document.getElementById(this.abv);
+	for(var i=0;i<div.childNodes.length;i++){
+		if(div.childNodes[i].className === "qty") {
+			div.childNodes[i].removeChild(div.childNodes[i].childNodes[0]);
+			div.childNodes[i].appendChild(document.createTextNode(this.qty));
+			return;
+		}
+	}
+}
+ 
+MenuItem.prototype.draw = function ( ) { 
+	var that = this;
+	var menuitem = document.createElement('div');
+	menuitem.id = this.abv;
+	menuitem.className = "menuitem";
+ 
+	var overlay = document.createElement('div');
+	overlay.className = "overlay";
+	var up = document.createElement('div');
+	up.className = "up";
+	//up.addEventListener("click",function(){that.increaseQty();that.updateQty();});
+	up.addEventListener("mousedown",function(){that.startHoldInc();});
+	up.addEventListener("mouseup",function(){that.endHold();});
+	var down = document.createElement('div');
+	down.className = "down";
+	//down.addEventListener("click",function(){that.decreaseQty();that.updateQty();});
+	down.addEventListener("mousedown",function(){that.startHoldDec();});
+	down.addEventListener("mouseup",function(){that.endHold();});
+	overlay.appendChild(up);
+	overlay.appendChild(down);
+ 
+	
+	var qty = document.createElement('div');
+	qty.className = "qty";
+	qty.appendChild(document.createTextNode(this.qty));
+	qty.addEventListener("click",function(){that.drawText();});
+ 
+	var content = document.createElement('div');
+	content.className = "content";
+	var controls = document.createElement('div');
+	controls.className = "controls";
+	var icon = document.createElement('div');
+	icon.className = "icon";
+	var name = document.createElement('div');
+	name.className = "name";
+	name.appendChild(document.createTextNode(this.name));
+	var description = document.createElement('div');
+	description.className = "description";
+	description.appendChild(document.createTextNode(this.desc));
+ 
+	content.appendChild(controls);
+	content.appendChild(icon);
+	content.appendChild(name);
+	content.appendChild(description);
+ 
+	menuitem.appendChild(overlay);
+	menuitem.appendChild(qty);
+	menuitem.appendChild(content);
+ 
+	
+	return menuitem;
+}
+ 
+ 
+ 
+function load ( ) {
+	var menu = new Menu("2c1b");
+	menu.addMenuItem("Chocolate Chip","cc","","Choc chip own zone");
+	menu.addMenuItem("Oatmeal Butterscotch","ob","","Mmmmm scotchy");
+	menu.addMenuItem("M&M","mm","","Shit cookie");
+	var md = menu.draw();
+	document.body.appendChild(md);
+	
+}
+ 
+</script> 
+ 
+<body onload="load();"> 
+ 
+<!--<div class="menu"> 
+	<div class="menuitem"> 
+		<div class="overlay"> 
+			<div class="up"></div> 
+			<div class="down"></div> 
+		</div> 
+		<div class="qty">4</div> 
+		<div class="content"> 
+			<div class="controls"></div> 
+			<div class="icon"></div> 
+			<div class="name">Chocolate Chip</div> 
+			<div class="description">Chocolate chip cookies are fuckin great man!</div> 
+		</div> 
+	</div> 
+</div> --> 
+<br> 
+<textarea rows="30" cols="100" id="testout" style="display: none;"></textarea> 
+ 
+ 
+<form action="https://www.paypal.com/cgi-bin/webscr" id="pp_form" method="post" onsubmit="return cart.submit();"> 
+<input type="hidden" name="cmd" value="_s-xclick"> 
+<input type="hidden" name="hosted_button_id" value="BZAVVT52B9VAW"> 
+<table> 
+<tr><td><input type="hidden" name="on0" value="# of cookies">How many cookies would you like to order?</td></tr><tr><td><select id="item_dropdown" name="os0"> 
+	<option value="1 dozen cookies">1 dozen cookies $12.00</option> 
+	<option value="3 dozen cookies">3 dozen cookies $22.00</option> 
+</select> </td></tr> 
+<tr><td><input type="hidden" name="on1" value="What cookies would you like?"></td></tr> 
+<tr><td><input type="hidden" name="os1" maxlength="60" id="cart_output"></td></tr> 
+</table> 
+<input type="hidden" name="currency_code" value="USD"> 
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> 
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"> 
+</form> 
+</body> 
+</html> 
