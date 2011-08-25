@@ -1,22 +1,24 @@
 MenuItem.prototype = {};
 MenuItem.constructor = MenuItem;
  
-function MenuItem ( name, abbreviation, icon, description ) {
+function MenuItem ( menu, name, abbreviation, icon, description ) {
+	this.menu = menu;
 	this.name = name;
 	this.abv = abbreviation;
 	this.icon = icon || "http://placehold.it/75x75";
 	this.desc = description;
 	this.qty = 0;
+	Object.call(this);
 }
  
-MenuItem.prototype.increaseQty = function () {
-	++this.qty;
-	//this.updateQty();
+MenuItem.prototype.increaseQty = function ( qty ) {
+	this.qty += qty;
+	this.menu.updateCart();
 }
  
 MenuItem.prototype.decreaseQty = function ( ) {
 	(this.qty>0)?--this.qty:this.qty=0;
-	//this.updateQty();
+	this.menu.updateCart();
 }
  
 MenuItem.prototype.setQty = function ( q ) {
@@ -85,9 +87,13 @@ MenuItem.prototype.draw = function ( ) {
  	var leftButton = document.createElement('div');
 	leftButton.className = "button";
 	leftButton.appendChild(document.createTextNode("+ Half Dozen"));
+	leftButton.addEventListener("click",function ( ) {that.increaseQty(6);});
+	
+
 	var rightButton = document.createElement('div');
 	rightButton.className = "button";
 	rightButton.appendChild(document.createTextNode("+ Dozen"));
+	rightButton.addEventListener("click",function ( ) {that.increaseQty(12);});
 
 	overlay.appendChild(name);
 
