@@ -35,6 +35,13 @@ function load ( ) {
 	menu.addMenuItem("Chocolate Chip","cc","","Choc chip own zone");
 	menu.addMenuItem("Oatmeal Butterscotch","ob","","Mmmmm scotchy");
 	menu.addMenuItem("M&M","mm","","Shit cookie");
+	menu.addMenuItem("Oatmeal Raisin","or","","Shit cookie");
+	menu.addMenuItem("Oatmeal Chocolate Chip","oc","","");
+	menu.addMenuItem("White Chocolate Macadamia Nut","wc","","");
+	menu.addMenuItem("Chocolate Orange","","","");
+	menu.addMenuItem("Brown Butter Brown Sugar","","","");
+	menu.addMenuItem("Soft Ginger","","","");
+	menu.addMenuItem("Snickerdoodle","","","");
 	var md = menu.draw();
 	document.body.appendChild(md);
 }
@@ -44,19 +51,17 @@ function load ( ) {
 <body onload="load();"> 
  
 <!--<div class="menu"> 
-	<div class="menuitem"> 
-		<div class="overlay"> 
-			<div class="up"></div> 
-			<div class="down"></div> 
+	<div class="items">
+		<div class="menuitem"> 
+			<div class="overlay"> 
+				<div class="name">Chocolate Chip</div> 
+				<div class="leftButton"></div> 
+				<div class="rightButton"></div> 
+			</div> 
 		</div> 
-		<div class="qty">4</div> 
-		<div class="content"> 
-			<div class="controls"></div> 
-			<div class="icon"></div> 
-			<div class="name">Chocolate Chip</div> 
-			<div class="description">Chocolate chip cookies are fuckin great man!</div> 
-		</div> 
-	</div> 
+	</div>
+	<div class="cart">
+	</div>
 </div> --> 
 <br> 
 <textarea rows="30" cols="100" id="testout" style="display: none;"></textarea> 

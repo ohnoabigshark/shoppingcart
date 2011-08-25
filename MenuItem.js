@@ -66,51 +66,38 @@ MenuItem.prototype.draw = function ( ) {
 	var that = this;
 	var menuitem = document.createElement('div');
 	menuitem.id = this.abv;
-	menuitem.className = "menuitem";
+	menuitem.className = "menuitem ";//+this.abv;
  
 	var overlay = document.createElement('div');
 	overlay.className = "overlay";
-	var up = document.createElement('div');
-	up.className = "up";
-	//up.addEventListener("click",function(){that.increaseQty();that.updateQty();});
-	up.addEventListener("mousedown",function(){that.startHoldInc();});
-	up.addEventListener("mouseup",function(){that.endHold();});
-	var down = document.createElement('div');
-	down.className = "down";
-	//down.addEventListener("click",function(){that.decreaseQty();that.updateQty();});
-	down.addEventListener("mousedown",function(){that.startHoldDec();});
-	down.addEventListener("mouseup",function(){that.endHold();});
-	overlay.appendChild(up);
-	overlay.appendChild(down);
- 
-	
-	var qty = document.createElement('div');
-	qty.className = "qty";
-	qty.appendChild(document.createTextNode(this.qty));
-	qty.addEventListener("click",function(){that.drawText();});
- 
-	var content = document.createElement('div');
-	content.className = "content";
-	var controls = document.createElement('div');
-	controls.className = "controls";
-	var icon = document.createElement('div');
-	icon.className = "icon";
 	var name = document.createElement('div');
 	name.className = "name";
 	name.appendChild(document.createTextNode(this.name));
-	var description = document.createElement('div');
-	description.className = "description";
-	description.appendChild(document.createTextNode(this.desc));
- 
-	content.appendChild(controls);
-	content.appendChild(icon);
-	content.appendChild(name);
-	content.appendChild(description);
- 
-	menuitem.appendChild(overlay);
-	menuitem.appendChild(qty);
-	menuitem.appendChild(content);
- 
+	name.style.visibility = 'visible';
+	name.style.width = '100px';
 	
+	document.body.appendChild(name);
+	if(name.clientHeight>20){
+		overlay.style.top = "71px";
+	}
+	document.body.removeChild(name);
+	name.style.visibility = 'visible';
+ 	var leftButton = document.createElement('div');
+	leftButton.className = "button";
+	leftButton.appendChild(document.createTextNode("+ Half Dozen"));
+	var rightButton = document.createElement('div');
+	rightButton.className = "button";
+	rightButton.appendChild(document.createTextNode("+ Dozen"));
+
+	overlay.appendChild(name);
+
+	overlay.appendChild(rightButton);
+	overlay.appendChild(leftButton);
+	 
+	//onmouseover can expand to full name card
+	//have to style the name on the element to set width
+
+	menuitem.appendChild(overlay);
+
 	return menuitem;
 }
